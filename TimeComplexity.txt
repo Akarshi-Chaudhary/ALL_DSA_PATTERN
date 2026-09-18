@@ -1,0 +1,14 @@
+Simple Operation -> Constant Time --> independent of input 
+for LeetCode (can do in general 10^8 operations in constant time.
+> 10^8 --> show time limit exceeds.
+
+in worst case for:  directly depend on n value .
+
+if n = 10 --> O(n) , for O(nlogn) = 3, for(O n * n) = 100, for(O(N^3)) = 1000, for (O 2^n) = 1024 operation occurs.
+for(n!) = ----(yes) but
+for(O n ^ n) > 10^8 ----> time limit exceeds.
+
+problem time complexity = max  ( diff section of problem time complexity)
+
+
+
