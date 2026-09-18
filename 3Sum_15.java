@@ -8,7 +8,12 @@ sum > 0   → need a SMALLER sum → right--
 
   --> 3Sum = Sort → Fix one element → Two pointers → Handle duplicates.
 
+Sorting       → O(n log n)
+Outer loop    → O(n)
+Two pointers  → O(n)
 
+Overall       → O(n²)
+Space         → O(1) auxiliary space
 
   //optimise
   class Solution {
