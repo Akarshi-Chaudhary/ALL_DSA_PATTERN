@@ -1,1 +1,1 @@
-# ALL_DSA_PATTERN
+# Pattern 1 : two pointera.
