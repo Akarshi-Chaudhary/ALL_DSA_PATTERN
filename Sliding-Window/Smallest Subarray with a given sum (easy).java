@@ -27,10 +27,10 @@ public class SmallestSubarray {
         int res = Integer.MAX_VALUE;
 
         while (high < n) {
-            sum += a[high];
-            while (sum >= s) {
+            sum += a[high];  // hiring
+            while (sum >= s) {      // int len = high - low + 1
                 res = Math.min(res, high - low + 1);
-                sum -= a[low];
+                sum -= a[low]; // firing
                 low++;
             }
             high++;
