@@ -1,1 +1,1 @@
-# Pattern 1 : two pointera.
+# Pattern 1 : two pointers.
