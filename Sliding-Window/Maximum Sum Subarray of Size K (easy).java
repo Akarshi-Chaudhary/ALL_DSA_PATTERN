@@ -94,3 +94,39 @@ public class MaximumSumSubarray {
 /* right moves → add
 size == k   → calculate
 left moves  → remove */
+
+public class MaximumSumSubarray {
+
+    public static int maxSum(int[] arr, int k) {
+
+        int low = 0;
+        int high = 1;
+
+        int sum = arr[0];
+        int res = arr[0];
+
+        while (high < arr.length) {
+
+            sum += arr[high];
+
+            if (high - low + 1 == k) {
+                res = Math.max(res, sum);
+
+                sum -= arr[low];
+                low++;
+            }
+
+            high++;
+        }
+
+        return res;
+    }
+
+    public static void main(String[] args) {
+
+        int[] arr = {2, 1, 5, 1, 3, 2};
+        int k = 3;
+
+        System.out.println(maxSum(arr, k));
+    }
+}
