@@ -4,6 +4,15 @@ This is a Variable-Size Sliding Window + HashMap problem
   approch : " low = 0, high = 0, HashMap = frequency of characters, res = maximum length" 
 Time  → O(n), Space → O(k)
 
+          Window
+             |
+     ┌───────┼───────┐
+     ↓       ↓       ↓
+   < K      == K    > K
+     |       |       |
+  Expand   Update   Shrink
+                    low++
+
 high → expand window
         ↓
 add character to map
