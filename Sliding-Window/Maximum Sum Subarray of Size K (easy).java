@@ -1,4 +1,48 @@
 // https://www.geeksforgeeks.org/problems/max-sum-subarray-of-size-k5313/1
+
+import java.util.*;
+
+public class MaximumSumSubarray {
+
+    public static int maxSum(int[] a, int k) {
+
+        int n = a.length;
+
+        int low = 0;
+        int high = 1;
+        int sum = a[0];
+        int res = Integer.MIN_VALUE;
+
+        while (true) {
+
+            if (high == n)
+                break;
+
+            sum = sum + a[high];
+
+            if (high - low + 1 == k) {
+
+                res = Math.max(res, sum);
+
+                sum = sum - a[low];
+                low++;
+            }
+
+            high++;
+        }
+
+        return res;
+    }
+
+    public static void main(String[] args) {
+
+        int[] a = {2, 1, 5, 1, 3, 2};
+        int k = 3;
+
+        System.out.println(maxSum(a, k));
+    }
+}
+
 /*
 his is the basic Fixed-Size Sliding Window problem.
 Time  → O(n × k)
