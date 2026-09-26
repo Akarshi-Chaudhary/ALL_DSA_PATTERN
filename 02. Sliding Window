@@ -1,0 +1,24 @@
+. How to recognize it
+
+Think Sliding Window when the question contains:
+    subarray / substring
+    contiguous elements
+    longest / shortest / maximum / minimum
+    fixed size k
+    at most / at least k
+    sum of a contiguous range
+    longest substring satisfying a condition
+
+2. Main types
+There are mainly 2 patterns:
+Sliding Window
+│
+├── Fixed Size Window                                 right moves → when size becomes k → calculate → remove left.
+│   └── Window size = k
+└── Variable Size Window
+    └── Expand + Shrink based on condition             right expands → condition breaks → left shrinks → update answer.
+
+3 Most optimized sliding-window problems:
+
+Time  → O(n)
+Space → O(1) or O(n)
